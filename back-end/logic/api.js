@@ -1,4 +1,0 @@
-import * as os from "node:os";
-console.log(os.cpus());
-
-import { express } from "npm:express";
