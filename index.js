@@ -1,4 +1,5 @@
 import express from "npm:express";
+import { getTest, postTest, getAll } from "./controllers/test.js";
 
 const app = express();
 
@@ -30,10 +31,4 @@ app.route('/test/:id')
   })
 
 
-function getTest(req, res) {
-  res.send(`Slt : ${req.params.id}`)
-}
-
-function postTest(req, res) {
-  res.send(`PostSLT : ${req.params.id}`)
-}
+app.get('/test', getAll)
