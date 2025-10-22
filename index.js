@@ -31,9 +31,8 @@ app.route('/test')
   .put((req, res) => {
     putTest(req, res)
   })
-  .delete((req, res) => {
-    deleteTest(req, res)
-  })
 
 app.get('/test/:id', getTest)
+app.delete('/test/:id', deleteTest)
+
 app.listen(4000);
