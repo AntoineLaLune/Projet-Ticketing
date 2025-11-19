@@ -1,38 +1,8 @@
 import express from "npm:express";
-import { getTest, postTest, getAll, putTest, deleteTest } from "./controllers/test.js";
+import router from "./router.js";
 
 const app = express();
 
 app.use(express.json());
-//app.use(express.static('html'));
-/*
-app.set('view engine', 'pug');
-app.set('views','./html');
-
-app.route('/submit')
-  .get((req, res) => {
-    res.render('submit');
-    })
-  .post((req,res) =>{
-    const username=req.body.username;
-    console.log(username);  
-
-});
-*/
-
-app.route('/test')
-  .get((req, res) => {
-    getAll(req, res);
-
-  })
-  .post((req, res) => {
-    postTest(req, res)
-  })
-  .put((req, res) => {
-    putTest(req, res)
-  })
-
-app.get('/test/:id', getTest)
-app.delete('/test/:id', deleteTest)
-
+app.use("/api", router)
 app.listen(4000);
