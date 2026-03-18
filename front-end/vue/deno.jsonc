@@ -1,0 +1,30 @@
+{
+	"tasks": {
+		"dev": "vite",
+		"build": "run-p type-check \"build-only {@}\" --",
+		"preview": "vite preview",
+		"build-only": "vite build",
+		"type-check": "vue-tsc --build",
+		"lint": "eslint . --fix --cache"
+	},
+	"imports": {
+		"vue": "npm:vue",
+		"url": "node:url",
+		// dev
+		"@std/assert": "jsr:@std/assert@1",
+		"@tsconfig/node22": "npm:@tsconfig/node22",
+		"@types/node": "npm:@types/node",
+		"@vitejs/plugin-vue": "npm:@vitejs/plugin-vue",
+		"@vue/eslint-config-typescript": "npm:@vue/eslint-config-typescript",
+		"@vue/tsconfig": "npm:@vue/tsconfig",
+		"eslint": "npm:eslint",
+		"eslint-plugin-vue": "npm:eslint-plugin-vue",
+		"jiti": "npm:jiti",
+		"npm-run-all2": "npm:npm-run-all2",
+		"typescript": "npm:typescript",
+		"vite": "npm:vite",
+		"vite-plugin-vue-devtools": "npm:vite-plugin-vue-devtools",
+		"vue-tsc": "npm:vue-tsc",
+		"vue-router": "npm:vue-router"
+	}
+}

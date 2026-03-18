@@ -1,0 +1,20 @@
+services:
+
+  db:
+    container_name: projet-ticketing-db
+    image: mariadb:10.11
+    restart: no
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    volumes:
+      - /home/Antoine/Docker/Projet Ticketing:/var/lib/mysql:Z
+    ports:
+      - 3307:3306
+
+  adminer:
+    container_name: projet-ticketing-adminer
+    image: adminer
+    restart: no
+    ports:
+      - 8081:8080
+

@@ -1,11 +1,13 @@
-import Database from "npm:mysql2-async";
+import Database from "mysql2-async";
 
 const db = new Database({
-    host: "10.96.23.78",
-    user: "yey",
-    password: "4521",
-    database: "ticket",
-    skiptzfix: true,
+	host: Deno.env.get("DB_HOST"),
+	port: Deno.env.get("DB_PORT"),
+	user: Deno.env.get("DB_USER"),
+	password: Deno.env.get("DB_PASSWORD"),
+	database: Deno.env.get("DB_TABLE"),
+	skiptzfix: true,
+	dateStrings: true,
 });
 
 export default db;
