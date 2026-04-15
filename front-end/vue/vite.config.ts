@@ -1,10 +1,13 @@
+/// <reference types="vite/types/importMeta.d.ts" />
+
 import { fileURLToPath, URL } from 'url'
+
+import process from "node:process";
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
 	plugins: [
 		vue(),
@@ -18,7 +21,7 @@ export default defineConfig({
 	server: {
 		proxy: {
 			"/api": {
-				target: "http://localhost:4000/",
+				target: `${process.env.VITE_API_URL}`,
 				secure: false,
 				rewrite: (path) => path.replace("/api", "")
 			}

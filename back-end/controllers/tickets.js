@@ -1,7 +1,7 @@
 import * as ticketsModel from "../models/tickets.js";
 
-export async function getAllTickets(req, res) {
-	const tickets = await ticketsModel.getAll();
+export async function getTickets(req, res) {
+	const tickets = await ticketsModel.getTickets(req?.query?.limit, req?.query?.offset, req?.query?.rand);
 	if (!tickets) {
 		return res.status(400).json({ messaege: "No tickets found" });
 	}

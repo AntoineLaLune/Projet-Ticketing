@@ -10,8 +10,11 @@ import { RouterLink } from "vue-router";
 
 const tickets = ref([])
 
-api.getAllTickets().then(res => {
+api.getTickets().then(res => {
+	console.log(res.data);
+	console.log("CC");
 	tickets.value = res.data;
+	console.log("CC");
 })
 
 // async function init() {
@@ -58,18 +61,18 @@ async function getTechnicianUserName(ticket) {
 
 // DERNIERE CHOSE QUE JE FESSAIS ↓ C'est afficher le nom prenom du tech celon l'id
 
-setTimeout(async function(){
-	const ticketsData = tickets.value;
-	for (let i = 0; i < ticketsData.length; i++) {
-		const ticket = ticketsData[i];
-		if (ticket.technician_id) {
-			const p = document.getElementById("technician"+ticket.technician_id.toString())
-			const user = await api.getUser(ticket.technician_id);
-			const userData = user.data
-			p.textContent = userData.name + " ";
-		}
-	}
-}, 2000);
+// setTimeout(async function(){
+// 	const ticketsData = tickets.value;
+// 	for (let i = 0; i < ticketsData.length; i++) {
+// 		const ticket = ticketsData[i];
+// 		if (ticket.technician_id) {
+// 			const p = document.getElementById("technician"+ticket.technician_id.toString())
+// 			const user = await api.getUser(ticket.technician_id);
+// 			const userData = user.data
+// 			p.textContent = userData.name + " ";
+// 		}
+// 	}
+// }, 2000);
 </script>
 
 <template>

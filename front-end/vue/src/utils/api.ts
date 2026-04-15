@@ -1,9 +1,8 @@
-const apiTicketsUrl = globalThis.location.origin + import.meta.env.VITE_API_URL + "/tickets/"
-const apiUsersUrl = globalThis.location.origin + import.meta.env.VITE_API_URL + "/users/"
+const apiTicketsUrl = globalThis.location.origin + "/api/tickets/"
+const apiUsersUrl = globalThis.location.origin + "/api/users/"
 
 // Tickets
-
-export async function getAllTickets() {
+export async function getTickets() {
 	const ticketsResponse = await fetch(apiTicketsUrl);
 	const ticketsData = await ticketsResponse.json();
 	return ticketsData;
@@ -81,7 +80,6 @@ export async function deleteTicket() {
 }
 
 // Users
-
 export async function getUser(id:number) {
 	const url:string = apiUsersUrl+id.toString();
 
@@ -89,7 +87,6 @@ export async function getUser(id:number) {
 	const userData = await userResponse.json();
 	return userData;
 }
-
 // Test
 
 async function test() {
