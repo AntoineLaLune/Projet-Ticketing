@@ -2,8 +2,6 @@
 
 import { fileURLToPath, URL } from 'url'
 
-import process from "node:process";
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
@@ -21,10 +19,13 @@ export default defineConfig({
 	server: {
 		proxy: {
 			"/api": {
-				target: `${process.env.VITE_API_URL}`,
+				target: 'http://localhost:4000/',
 				secure: false,
-				rewrite: (path) => path.replace("/api", "")
+				// rewrite: (path) => path.replace("/api", "/api")
 			}
 		}
+	},
+	build: {
+		outDir: "../../back-end/public"
 	}
 })

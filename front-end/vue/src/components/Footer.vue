@@ -4,7 +4,7 @@
 </script>
 
 <template>
-	<footer id="footer_default" class="footer-default">
+	<div id="body" class="body">
 		<label>
 			Projet-Ticketing
 		</label>
@@ -13,16 +13,11 @@
 			Tickets
 			Aide
 		</table>
-	</footer>
+	</div>
 </template>
 
 <style scoped>
-.footer-default {
-	margin: 1vi;
-	padding: 4vi;
-	border-radius: 4vi 4vi 1vi 1vi;
-	background-color: #343434;
-	color: #FFFFFF;
+.body {
 	display: flex;
 	justify-content: space-between;
 	flex: 0 1 40px;
@@ -32,7 +27,7 @@
 	justify-content: right;
 }
 
-.footer-selection {
+.footer-content {
 	justify-content: center;
 }
 

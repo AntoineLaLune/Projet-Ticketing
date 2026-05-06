@@ -17,37 +17,8 @@ import { ref } from "vue";
 	</div>
 </template>
 
-<style>
-html,
-body {
-	height: 100%;
-	margin: 0;
-	background-color: lemonchiffon;
-}
-
-* {
-	border-width: 0;
-	padding: 0;
-	margin: 0;
-}
-
+<style scoped>
 button {
 	padding: 0.25vi;
-}
-
-.body {
-	margin: 1vi;
-	padding: 2vi;
-	background-color: #343434;
-	color: #FFFFFF;
-	display: flex;
-	flex-flow: column;
-
-	.login {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-	}
 }
 </style>

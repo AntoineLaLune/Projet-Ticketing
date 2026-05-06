@@ -73,13 +73,105 @@ h1, h2, h3, h4, h5, h6 {
 
 </style>
 
-<style>
-#app {
-	display: grid;
-	grid-template-rows: 64px 1fr 64px;
-	row-gap: 20px;
-	min-height: 100vh;
-	
-	word-wrap: break-word;
+
+<style> /* Global CSS by me (AntoineLaLune) */
+
+:root {
+	--opacity: #2C2C2C;
+	--opacity-hover: #3C3C3C;
+	--light-gray: #e4e4e4;
+	--lavender: rgb(229, 229, 250);
+	--opacity: rgb(0, 0, 0, 0.5);
+	--opacity-hover: rgba(255, 255, 255, 0.5);
+	--tr-open: rgb(128, 0, 0, 0.5);
+	--tr-open-hover: rgb(192, 0, 0, 0.5);
+	--tr-closed: rgb(0, 144, 0, 0.5);;
+	--tr-closed-hover: rgb(0, 192, 0, 0.5);;
 }
+
+html, body {
+	/* Not to harsh white background */
+	background-color: var(--lavender);
+}
+
+* {
+	/* Default font */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+	/* Borders */
+	border-style: none;
+	border-width: 0px;
+	border-radius: 0px;
+}
+
+.body {
+	margin: 1vi;
+	padding: 2vi;
+	background-color: var(--opacity);
+	color: white;
+
+	.login {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+button {
+	color: white;
+	padding: 8px;
+	background-color: var(--opacity);
+	cursor: pointer;
+}
+button:hover {
+	color: black;
+	background-color: var(--opacity-hover);
+}
+label {
+	color: white;
+}
+input {
+	color: white;
+	padding: 8px;
+	background-color: var(--opacity);
+}
+input:hover {
+	background-color: var(--opacity-hover);
+}
+input:focus {
+	outline-style: dashed;
+	outline-color: white;
+	outline-width: 2px;
+}
+
+textarea {
+    display: flex;
+    justify-content: start;
+
+    width: 100% !important;
+    background-color: var(--opacity);
+    color: white;
+
+    outline: 0px;
+}
+textarea:hover {
+	background-color: var(--opacity-hover);
+}
+textarea:focus {
+	outline-style: dashed;
+	outline-color: white;
+	outline-width: 2px;
+}
+</style>
+
+<style>
+/* #app {
+/* 	display: grid;
+/* 	grid-template-rows: 64px 1fr 64px;
+/* 	row-gap: 20px;
+/* 	min-height: 100vh;
+/* 	
+/* 	word-wrap: break-word; 
+/*} */
 </style>

@@ -87,11 +87,3 @@ export async function getUser(id:number) {
 	const userData = await userResponse.json();
 	return userData;
 }
-// Test
-
-async function test() {
-	const tickets = await affectTech(6, 1);
-	console.log(tickets);
-}
-
-test()

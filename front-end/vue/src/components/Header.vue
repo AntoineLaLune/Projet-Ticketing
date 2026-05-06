@@ -4,11 +4,11 @@
 </script>
 
 <template>
-	<header id="header_default" class="header-default">
+	<div id="body" class="body">
 		<label id="header_logo" class="header-logo">
 			Projet-Ticketing
 		</label>
-		<div id="header_selection" class="header-selection">
+		<div id="header_selection" class="header-content">
 			<button>Tableau de bord</button>
 			<button>Tickets</button>
 			<button>Aide</button>
@@ -18,16 +18,11 @@
 				Account
 			</button>
 		</div>
-	</header>
+	</div>
 </template>
 
 <style scoped>
-.header-default {
-	margin: 1vi;
-	padding: 2vi;
-	border-radius: 1vi 1vi 4vi 4vi;
-	background-color: #343434;
-	color: #FFFFFF;
+.body {
 	display: flex;
 	justify-content: space-between;
 	flex: 0 1 auto;
@@ -35,9 +30,10 @@
 
 .header-logo {
 	justify-content: right;
+	align-content: center;
 }
 
-.header-selection {
+.header-content {
 	justify-content: center;
 }
 

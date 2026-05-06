@@ -2,7 +2,7 @@ import db from "../db/config.js";
 
 export async function getTickets(limit, offset, rand) {
 	const params = [];
-	rand_stmt = "", limit_stmt = "", offset_stmt = "";
+	let rand_stmt = "", limit_stmt = "", offset_stmt = "";
 	if (rand) {
 		rand_stmt = "ORDER BY RAND()";
 	}
@@ -17,9 +17,10 @@ export async function getTickets(limit, offset, rand) {
 		params.push(offset);
 	}
 	return await db.getall(
-		`SELECT *
-		FROM tickets ${rand_stmt} ${limit_stmt} ${offset_stmt} 
-			JOIN users.name, users.last_name USING (technician_id)`,
+		`SELECT tickets.*, users.name, users.last_name
+		FROM tickets
+		JOIN users ON users.id
+		${rand_stmt} ${limit_stmt} ${offset_stmt}`,
 		params
 	);
 }

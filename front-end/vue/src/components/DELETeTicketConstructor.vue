@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { reactive } from 'vue'
-import v_newTicketPreview from './newTicketPreview.vue';
-
 
 </script>
 
