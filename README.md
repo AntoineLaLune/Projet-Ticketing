@@ -75,7 +75,7 @@ mariadb -h localhost -u root -p
 
 Créez la base de données, et entrez dedans :
 
-```bash
+```sql
 CREATE DATABASE IF NOT EXISTS ticket;
 USE ticket;
 ```
