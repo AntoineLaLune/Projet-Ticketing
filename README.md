@@ -9,8 +9,9 @@ Vous pouvez trouver ici la présentation du projet, ainsi que son guide de mise 
 
 ## Présentation du projet
 
-(Draft)
+Le projet ticketing, est un site web de gestion et de création de tickets, avec réponses des techniciens.
 
+Uniquement les techniciens peuvent se connecter à l'aide d'identifiants unique, dans le but de permettre une utilisation simple du site web dans le contexte d'un déploiement de celui-ci en entreprise. 
 ## Guide de mise en place
 
 ### Base de données
