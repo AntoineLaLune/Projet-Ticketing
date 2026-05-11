@@ -91,7 +91,7 @@ Installez Deno sur votre machine, un guide est disponible [ici](https://docs.den
 #### Clonez le dépôt Git, et rentrez dans le back-end de celui-ci
 
 ```bash
-git clone [https://github.com/AntoineLaLune/Projet-Ticketing.git](https://github.com/AntoineLaLune/Projet-Ticketing.git)
+git clone https://github.com/AntoineLaLune/Projet-Ticketing.git
 cd ./Projet-Ticketing/back-end
 ```
 
